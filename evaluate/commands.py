@@ -3,6 +3,7 @@ import os
 import json
 from data import getData as embrace
 from presentation import Welcome
+from eprint.main import printHelpDocs
 
 # channels
 from channels.scaffolding import scaffold
@@ -17,7 +18,7 @@ def help():
     print('\n')
     for command in COMMANDS_MAP:
         if COMMANDS_MAP[command].__doc__ is not None:
-            print(COMMANDS_MAP[command].__doc__)
+            printHelpDocs(COMMANDS_MAP[command].__doc__)
     print('\n')
 
 def version():
@@ -26,7 +27,7 @@ def version():
     return ''.join(['v', embrace()["version"]])
 
 def printChannels():
-    """
+    """channels: Print all the channels (services) available
     """
     print('\n')
     for channel in COMMANDS_MAP:
@@ -36,6 +37,8 @@ def printChannels():
 
 # clears screen
 def clear():
+    """clear: Clears the screen
+    """
     os.system('clear')
 
 
@@ -44,7 +47,6 @@ COMMANDS_MAP = {
     'help': help,
     'channels': printChannels,
     'clear': clear,
-    'cls': clear,
     '@scaffold': scaffold.init,
     'version': version,
     'whoami': Welcome

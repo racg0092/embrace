@@ -5,6 +5,7 @@ import os
 from evaluate import commands as cmd
 import json
 from colorama import Fore
+from eprint.main import printBWG
 
 presentation.Welcome()
 
@@ -12,8 +13,8 @@ channel = os.path.basename(__file__).replace('.py', '')
 
 
 while True and sys.argv.__len__() <= 1:
-    command = input(' '.join([Fore.BLUE + f'@{channel}',  Fore.WHITE + '>>',Fore.GREEN + '']))
-    
+    command = printBWG(channel)
+
     #if command is exit end REPL
     if command == '.exit':
         break
