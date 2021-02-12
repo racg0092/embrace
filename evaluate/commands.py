@@ -2,6 +2,11 @@ import sys
 import os
 import json
 
+
+
+def help():
+    print('Coming soon...')
+
 def version():
     contents = os.listdir()
     try:
@@ -18,8 +23,8 @@ def clear():
 
 # map of commands
 COMMANDS_MAP = {
-    'help': 'help',
-    '-h': 'help',
+    'help': help,
+    '-h': help,
     'version': version,
     '-v': version,
     'clear': clear

@@ -30,4 +30,5 @@ while True and sys.argv.__len__() <= 1:
 
 if __name__ == "__main__" and sys.argv.__len__() > 1:
     cmd.runCommands(sys.argv[1:])
+    print('\nRun embrace without argument to start interacte REPL')
      
