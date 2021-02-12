@@ -13,7 +13,7 @@ def WelcomePrettyPrint():
 
 
 def Welcome():
-    message = 'Embrace welcomes you!'
+    message = 'Embrace v0.0.0'
     message2 = 'Our aim is to handle repetitive tasks for you.'
     message3 = 'So you can build amazing things.'
     print('*'*(message2.__len__()+8))
