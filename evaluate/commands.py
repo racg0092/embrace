@@ -2,6 +2,7 @@ import sys
 import os
 import json
 from data import getData as embrace
+from presentation import Welcome
 
 # channels
 from channels.scaffolding import scaffold
@@ -46,6 +47,7 @@ COMMANDS_MAP = {
     'cls': clear,
     '@scaffold': scaffold.init,
     'version': version,
+    'whoami': Welcome
 }
 
 

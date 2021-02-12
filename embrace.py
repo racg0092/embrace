@@ -12,7 +12,7 @@ channel = os.path.basename(__file__).replace('.py', '')
 
 
 while True and sys.argv.__len__() <= 1:
-    command = input(' '.join([Fore.BLUE + f'@{channel}', Fore.GREEN + '>> ']))
+    command = input(' '.join([Fore.BLUE + f'@{channel}',  Fore.WHITE + '>>',Fore.GREEN + '']))
     
     #if command is exit end REPL
     if command == '.exit':
