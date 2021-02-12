@@ -1,0 +1,19 @@
+{
+  "name": "embrace",
+  "version": "0.0.0",
+  "description": "Pythong CLI that aids in scaffolding development environments and automation of tasks",
+  "main": "embrace.py",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Python",
+    "CLI",
+    "Software",
+    "Development",
+    "Aid",
+    "Automation"
+  ],
+  "author": "Richard Chapman Gomez",
+  "license": "ISC"
+}
