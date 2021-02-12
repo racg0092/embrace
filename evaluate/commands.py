@@ -12,7 +12,12 @@ def help():
 def version():
     return ''.join(['v', embrace()["version"]])
 
-    
+def printChannels():
+    print('\n')
+    for channel in COMMANDS_MAP:
+        if channel.startswith('@'):
+            print(channel)
+    print('\n')
 
 # clears screen
 def clear():
@@ -27,6 +32,7 @@ COMMANDS_MAP = {
     '-v': version,
     'clear': clear,
     'cls': clear,
+    'channels': printChannels,
     '@scaffold': scaffold.init
 }
 
