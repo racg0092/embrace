@@ -23,11 +23,11 @@ while True and sys.argv.__len__() <= 1:
     # if command is valid run command
     elif command in cmd.COMMANDS_MAP:
         result = cmd.runCommand(command)
-        if result != None:
+        if result is not None:
             print(result)
     else:
         print('Unable to process request. Unexpected Error')
 
 if __name__ == "__main__" and sys.argv.__len__() > 1:
-    print(sys.argv[1:])
+    cmd.runCommands(sys.argv[1:])
      

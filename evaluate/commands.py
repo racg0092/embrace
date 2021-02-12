@@ -21,6 +21,7 @@ COMMANDS_MAP = {
     'help': 'help',
     '-h': 'help',
     'version': version,
+    '-v': version,
     'clear': clear
 }
 
@@ -29,7 +30,12 @@ COMMANDS_MAP = {
 def runCommand(command):
     return COMMANDS_MAP[command]()
 
-
+def runCommands(commands):
+    for command in commands:
+        if command in COMMANDS_MAP:
+            result = COMMANDS_MAP[command]()
+            if result is not None:
+                print(result)
 
 
 
