@@ -3,6 +3,8 @@ import os
 import json
 from data import getData as embrace
 
+# channels
+from channels.scaffolding import scaffold
 
 def help():
     print('Coming soon...')
@@ -24,7 +26,8 @@ COMMANDS_MAP = {
     'version': version,
     '-v': version,
     'clear': clear,
-    'cls': clear
+    'cls': clear,
+    '@scaffold': scaffold.init
 }
 
 

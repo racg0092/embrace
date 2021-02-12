@@ -7,10 +7,10 @@ import json
 
 presentation.Welcome()
 
-
+channel = os.path.basename(__file__).replace('.py', '')
 
 while True and sys.argv.__len__() <= 1:
-    command = input('>> ')
+    command = input(f'@{channel} >> ')
     
     #if command is exit end REPL
     if command == '.exit':
