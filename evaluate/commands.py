@@ -7,12 +7,26 @@ from data import getData as embrace
 from channels.scaffolding import scaffold
 
 def help():
-    print('Coming soon...')
+    """help: Provides a list of all available commands and their uses.
+
+    NOTE: 
+        This is just the @embrace channel help section. You will have to change
+        channesl to see their respectives sections.
+    """
+    print('\n')
+    for command in COMMANDS_MAP:
+        if COMMANDS_MAP[command].__doc__ is not None:
+            print(COMMANDS_MAP[command].__doc__)
+    print('\n')
 
 def version():
+    """version: Returns Embrace current version.
+    """
     return ''.join(['v', embrace()["version"]])
 
 def printChannels():
+    """
+    """
     print('\n')
     for channel in COMMANDS_MAP:
         if channel.startswith('@'):
@@ -27,19 +41,25 @@ def clear():
 # map of commands
 COMMANDS_MAP = {
     'help': help,
-    '-h': help,
-    'version': version,
-    '-v': version,
+    'channels': printChannels,
     'clear': clear,
     'cls': clear,
-    'channels': printChannels,
-    '@scaffold': scaffold.init
+    '@scaffold': scaffold.init,
+    'version': version,
 }
 
 
 # runs the command map to the dictionary
 # this function is used for interactive REPL
 def runCommand(command):
+    """Executes CLI command based on command's map
+
+    Args:
+        command: The name of the command to execute
+
+    Returns:
+        The result of the command execcution if any.
+    """
     return COMMANDS_MAP[command]()
 
 

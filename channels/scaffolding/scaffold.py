@@ -11,3 +11,4 @@ def init():
 
         if command == '.exit':
             break
+        

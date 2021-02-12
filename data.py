@@ -10,6 +10,7 @@ def loadData():
         return json.load(f)
     except FileNotFoundError as e:
         print(f'package.json not found: {e!r}')
+        raise
 
 def getData():
     if environment == 'dev':
@@ -20,6 +21,7 @@ def getData():
             return loadData()
         except SystemError as e:
             print(f'{e!r}')
+            raise
         else:
             print('Unkown error')
 
