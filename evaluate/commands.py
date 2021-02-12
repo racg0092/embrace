@@ -1,19 +1,15 @@
 import sys
 import os
 import json
-
+from data import getData
 
 
 def help():
     print('Coming soon...')
 
 def version():
-    contents = os.listdir()
-    try:
-        fs = open('./package.json', 'r')
-        return ''.join(['v',json.load(fs)['version']])
-    except FileNotFoundError as e:
-        print(f'File System Error: {e!r}')
+    return ''.join(['v', getData()["version"]])
+
     
 
 # clears screen
