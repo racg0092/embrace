@@ -1,4 +1,4 @@
-from data import getData
+from data import getData as embrace
 
 def WelcomePrettyPrint():
     print('*'*14, '  ', '**'*2)
@@ -13,7 +13,7 @@ def WelcomePrettyPrint():
 
 
 def Welcome():
-    message = f'Embrace v{getData()["version"]}'
+    message = f'Embrace v{embrace()["version"]}'
     message2 = 'Our aim is to handle repetitive tasks for you.'
     message3 = 'So you can build amazing things.'
     print('*'*(message2.__len__()+8))

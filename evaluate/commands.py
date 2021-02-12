@@ -1,14 +1,14 @@
 import sys
 import os
 import json
-from data import getData
+from data import getData as embrace
 
 
 def help():
     print('Coming soon...')
 
 def version():
-    return ''.join(['v', getData()["version"]])
+    return ''.join(['v', embrace()["version"]])
 
     
 
@@ -23,14 +23,19 @@ COMMANDS_MAP = {
     '-h': help,
     'version': version,
     '-v': version,
-    'clear': clear
+    'clear': clear,
+    'cls': clear
 }
 
 
 # runs the command map to the dictionary
+# this function is used for interactive REPL
 def runCommand(command):
     return COMMANDS_MAP[command]()
 
+
+# runs all commands map to the directory
+# 
 def runCommands(commands):
     for command in commands:
         if command in COMMANDS_MAP:
