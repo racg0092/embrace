@@ -24,7 +24,7 @@ def help():
 def version():
     """version: Returns Embrace current version.
     """
-    return ''.join(['v', embrace()["version"]])
+    return ''.join(['v', embrace('package.json')["version"]])
 
 def printChannels():
     """channels: Print all the channels (services) available

@@ -13,7 +13,11 @@ def WelcomePrettyPrint():
 
 
 def Welcome():
-    message = f'Embrace v{embrace()["version"]}'
+    """whoami: Prints introduction banner.
+    NOTE:
+        This contains a welcome versiona and the software version.
+    """
+    message = f'Embrace v{embrace("package.json")["version"]}'
     message2 = 'Our aim is to handle repetitive tasks for you.'
     message3 = 'So you can build amazing things.'
     print('*'*(message2.__len__()+8))

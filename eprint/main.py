@@ -24,8 +24,8 @@ def printBWG(channel):
         ])
     return input(output)
 
-def printHelpDocs(doc):
 
+def printHelpDocs(doc):
     command = Fore.MAGENTA + doc[0:doc.index(':')]
     content = Fore.WHITE + doc[doc.index(':'):]
     print(command + content)
