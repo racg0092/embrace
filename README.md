@@ -38,8 +38,7 @@ If you don't get the about output run the following command.
 ```sh
 $ sudo apt install python3
 ```
+`note`: Depending on your Linux destribution you may need to use a different package manager.
 
-
-
-
-
+### PIP
+PIP is usually installed when python3 is installed. In case it is not you can refer to the [pip](https://pypi.org/project/pip/) website and download it manually.
