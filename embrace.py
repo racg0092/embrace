@@ -12,7 +12,7 @@ presentation.Welcome()
 channel = os.path.basename(__file__).replace('.py', '')
 
 
-while True and sys.argv.__len__() <= 1:
+while True and len(sys.argv) <= 1:
     command = printBWG(channel)
 
     #if command is exit end REPL

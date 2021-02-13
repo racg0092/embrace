@@ -16,9 +16,7 @@ def help():
         channesl to see their respectives sections.
     """
     print('\n')
-    for command in COMMANDS_MAP:
-        if COMMANDS_MAP[command].__doc__ is not None:
-            printHelpDocs(COMMANDS_MAP[command].__doc__)
+    [printHelpDocs(COMMANDS_MAP[cmd].__doc__) for cmd in COMMANDS_MAP if COMMANDS_MAP[cmd].__doc__ is not None]
     print('\n')
 
 def version():
@@ -29,11 +27,9 @@ def version():
 def printChannels():
     """channels: Print all the channels (services) available
     """
-    print('\n')
-    for channel in COMMANDS_MAP:
-        if channel.startswith('@'):
-            print(channel)
-    print('\n')
+    print('\n') # creates new line for space
+    [print(channel) for channel in COMMANDS_MAP if channel.startswith('@')]
+    print('\n') #
 
 # clears screen
 def clear():

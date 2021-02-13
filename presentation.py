@@ -20,7 +20,7 @@ def Welcome():
     message = f'Embrace v{embrace("package.json")["version"]}'
     message2 = 'Our aim is to handle repetitive tasks for you.'
     message3 = 'So you can build amazing things.'
-    print('*'*(message2.__len__()+8))
+    print('*'*(len(message2)+8))
     for i in range(3):
         if i == 0:
             out = '*'*2 + '  ' + message 
@@ -28,7 +28,7 @@ def Welcome():
             out = '*'*2 + '  ' + message2
         else:
             out = '*'*2 + '  ' + message3
-        out = out + ' '*(message2.__len__() + 8 - out.__len__() - 4) + '  **'
+        out = out + ' '*(len(message2) + 8 - len(out) - 4) + '  **'
         print(out)
-    print('*'*(message2.__len__()+8))
+    print('*'*(len(message2)+8))
     print('\n\n')
