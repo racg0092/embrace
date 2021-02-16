@@ -1,52 +1,10 @@
 import sys
 import os
-import json
-from data import getData as embrace
-from presentation import Welcome
-from eprint.main import printHelpDocs
-
-# channels
-from channels.scaffolding import scaffold
-
-def help():
-    """help: Provides a list of all available commands and their uses.
-
-    NOTE: 
-        This is just the @embrace channel help section. You will have to change
-        channesl to see their respectives sections.
-    """
-    print('\n')
-    [printHelpDocs(COMMANDS_MAP[cmd].__doc__) for cmd in COMMANDS_MAP if COMMANDS_MAP[cmd].__doc__ is not None]
-    print('\n')
-
-def version():
-    """version: Returns Embrace current version.
-    """
-    return ''.join(['v', embrace('package.json')["version"]])
-
-def printChannels():
-    """channels: Print all the channels (services) available
-    """
-    print('\n') # creates new line for space
-    [print(channel) for channel in COMMANDS_MAP if channel.startswith('@')]
-    print('\n') #
-
-# clears screen
-def clear():
-    """clear: Clears the screen
-    """
-    os.system('clear')
 
 
-# map of commands
-COMMANDS_MAP = {
-    'help': help,
-    'channels': printChannels,
-    'clear': clear,
-    '@scaffold': scaffold.init,
-    'version': version,
-    'whoami': Welcome
-}
+
+
+# GLOBAL SERVICES
 
 
 # runs the command map to the dictionary
