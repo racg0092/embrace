@@ -14,8 +14,6 @@ class Embrace(core.Channel):
     def __init__(self, name):
         self.name = name
         self.COMMANDS_MAP = {
-            'channels': self.printChannels,
-            '@scaffold': scaffold.open,
         }
 
     def printChannels(self):

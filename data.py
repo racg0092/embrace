@@ -6,10 +6,10 @@ environment = 'dev'
 
 def loadData(filename):
     try:
-        f = open(filename, 'r')
+        f = open(filename, mode='r', encoding='utf-8')
         return json.load(f)
     except FileNotFoundError as e:
-        print(f'package.json not found: {e!r}')
+        print(f'File {filename} not found: {e!r}')
         raise
 
 def getData(filename):

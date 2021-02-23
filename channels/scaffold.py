@@ -18,6 +18,8 @@ class Scaffold(core.Channel):
     
 
     def electron(self):
+        """electron: scaffolds electron application
+        """
         print('npx electron')
 
 
