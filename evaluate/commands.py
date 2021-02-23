@@ -105,12 +105,12 @@ def channelSwitch(channel):
 
 
 def localCommandScope(command):
-    def l(commands_map):
+    def x(commands_map):
         if command in commands_map:
             result = commands_map[command]()
             return result
         else:
             return f'{command} was not recognize as local command'
-    return l
+    return x
     
 
